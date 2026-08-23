@@ -1,12 +1,18 @@
 {
   "name": "conway",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
+  "module": "src/index.ts",
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^7"
+  },
+  "private": true,
+  "scripts": {
+    "postinstall": "node scripts/fetch-raylib-binding.cjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "raylib": "^0.14.0"
   }
 }
