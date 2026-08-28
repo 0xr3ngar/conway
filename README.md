@@ -2,7 +2,7 @@
 
 Conway's Game of Life on an infinite plane, built with [node-raylib](https://github.com/RobLoach/node-raylib) and Bun.
 
-![status](https://img.shields.io/badge/status-wip-orange)
+https://github.com/user-attachments/assets/68b4001e-b3ba-4219-b795-d7badc4343d3
 
 ## Install
 
