@@ -1,18 +1,27 @@
 {
-  "name": "conway",
-  "module": "src/index.ts",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^7"
-  },
-  "private": true,
-  "type": "module",
-  "dependencies": {
-    "raylib": "^0.14.0"
-  },
-  "trustedDependencies": [
-    "raylib"
-  ]
+    "name": "conway",
+    "module": "src/index.ts",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "start": "bun run src/index.ts",
+        "test": "bun test",
+        "fmt": "oxfmt src/",
+        "fmt:check": "oxfmt --check src/",
+        "lint": "oxlint src/"
+    },
+    "devDependencies": {
+        "@types/bun": "latest",
+        "oxfmt": "^0.65.0",
+        "oxlint": "^1.80.0"
+    },
+    "peerDependencies": {
+        "typescript": "^7.0.2"
+    },
+    "dependencies": {
+        "raylib": "^0.14.0"
+    },
+    "trustedDependencies": [
+        "raylib"
+    ]
 }
