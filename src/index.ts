@@ -100,7 +100,13 @@ const drawCells = () => {
                     ageColor(age),
                 );
             } else {
-                r.DrawRectangle(col * CELL + 1, row * CELL + 1, CELL - 2, CELL - 2, decayColor(decay));
+                r.DrawRectangle(
+                    col * CELL + 1,
+                    row * CELL + 1,
+                    CELL - 2,
+                    CELL - 2,
+                    decayColor(decay),
+                );
             }
         }
     }
@@ -117,8 +123,10 @@ const handleInput = () => {
 
     if (r.IsKeyPressed(r.KEY_N)) seedRandom(grid, NOISE_DENSITY, SEED_COLS, SEED_ROWS);
     if (r.IsKeyPressed(r.KEY_G)) showGrid = !showGrid;
-    if (r.IsKeyPressed(r.KEY_UP)) stepsPerSecond = Math.min(MAX_STEPS_PER_SECOND, stepsPerSecond + 2);
-    if (r.IsKeyPressed(r.KEY_DOWN)) stepsPerSecond = Math.max(MIN_STEPS_PER_SECOND, stepsPerSecond - 2);
+    if (r.IsKeyPressed(r.KEY_UP))
+        stepsPerSecond = Math.min(MAX_STEPS_PER_SECOND, stepsPerSecond + 2);
+    if (r.IsKeyPressed(r.KEY_DOWN))
+        stepsPerSecond = Math.max(MIN_STEPS_PER_SECOND, stepsPerSecond - 2);
 
     const mouse = r.GetMousePosition();
     const mouseWorld = r.GetScreenToWorld2D(mouse, camera);
@@ -174,7 +182,13 @@ while (!r.WindowShouldClose()) {
     r.EndMode2D();
 
     const status = running ? "running" : "paused";
-    r.DrawText(`${status}   gen ${grid.generation}   pop ${grid.population}   ${stepsPerSecond} steps/s`, 16, 12, 18, HUD);
+    r.DrawText(
+        `${status}   gen ${grid.generation}   pop ${grid.population}   ${stepsPerSecond} steps/s`,
+        16,
+        12,
+        18,
+        HUD,
+    );
     r.DrawText(
         "SPACE run/pause   LMB draw   RMB erase   R reset   N noise   G grid   UP/DOWN speed   MMB drag pan   wheel zoom",
         16,
