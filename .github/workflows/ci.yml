@@ -15,6 +15,9 @@ jobs:
               with:
                   bun-version: latest
 
+            - name: Install raylib build dependencies
+              run: sudo apt-get update && sudo apt-get install -y libx11-dev libxrandr-dev libxi-dev libxcursor-dev libxinerama-dev libgl1-mesa-dev libglu1-mesa-dev
+
             - name: Install dependencies
               run: bun install --frozen-lockfile
 
