@@ -1,15 +1,30 @@
 # conway
 
-To install dependencies:
+Conway's Game of Life on an infinite plane, built with [node-raylib](https://github.com/RobLoach/node-raylib) and Bun.
+
+![status](https://img.shields.io/badge/status-wip-orange)
+
+## Install
 
 ```bash
 bun install
 ```
 
-To run:
+## Run
 
 ```bash
-bun run index.ts
+bun run src/index.ts
 ```
 
-This project was created using `bun init` in bun v1.4.0. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+## Controls
+
+| Input | Action |
+| --- | --- |
+| `SPACE` | run / pause |
+| `LMB` / `RMB` | draw / erase cells |
+| `R` | reset |
+| `N` | random noise seed |
+| `G` | toggle grid lines |
+| `UP` / `DOWN` | simulation speed (1–60 steps/s) |
+| `MMB` drag | pan |
+| wheel | zoom toward cursor |
